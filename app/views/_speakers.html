@@ -1,0 +1,11 @@
+<div class="speakers">
+    <div class="speaker" ng-repeat="speaker in speakers">
+        <a ng-href="#/speaker/{{ speaker.id }}">
+            <div class="pic">
+                <img ng-src="http://openworldforum.org/fr/speakers/{{ speaker.id }}/photo?s=260"/>
+            </div>
+            <div class="name">{{ speaker.name }}</div>
+        </a>
+    </div>
+    <div class="clear"></div>
+</div>

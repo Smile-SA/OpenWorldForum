@@ -1,0 +1,108 @@
+#speakers {
+  background-color: $lighten-darkgrey;
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: $white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+div.speakers {
+  /*ul.list {
+    li {
+      padding-left: 30px;
+      div.pic {
+        background-color: #ffffff;
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      div.name {
+
+      }
+    }
+  }*/
+  margin: auto;
+  padding-bottom: 10px;
+  div.speaker {
+    width: 130px;
+    float: left;
+    margin: 10px;
+    background-color: $red;
+    &:active {
+      background-color: $white;
+      div.name {
+        color: $red;
+      }
+    }
+    div.pic {
+      background-color: $white;
+      width: 130px;
+      height: 130px;
+    }
+    div.name {
+      color: white;
+      text-align: center;
+      margin: 5px 10px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 449px) {
+  .speakers {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .speakers {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 749px) {
+  .speakers {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 899px) {
+  .speakers {
+    width: 750px;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1049px) {
+  .speakers {
+    width: 900px;
+  }
+}
+@media only screen and (min-width: 1050px) and (max-width: 1199px) {
+  .speakers {
+    width: 1050px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1349px) {
+  .speakers {
+    width: 1200px;
+  }
+}
+@media only screen and (min-width: 1350px) and (max-width: 1499px) {
+  .speakers {
+    width: 1350px;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1649px) {
+  .speakers {
+    width: 1500px;
+  }
+}
+@media only screen and (min-width: 1650px)  {
+  .speakers {
+    width: 1650px;
+  }
+}

@@ -1,0 +1,24 @@
+<div id="talk" class="clearfix">
+    <div class="header">
+        <a class="theme {{ talk.theme | lowercase }}" href="#/concept/{{ talk.theme | lowercase }}"></a>
+        <div class="infos">
+            <h1>{{ talk.title }}</h1>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="more-infos">
+        <p ng-show="talk.starts_at">Starts {{ talk.starts_at | date:'longDate' }} {{ talk.starts_at | date:'shortTime' }}</p>
+        <p ng-show="talk.duration">Duration: {{ talk.duration }} min</p>
+        <p ng-show="talk.room">Room: {{ talk.room }}</p>
+        <p ng-show="talk.track">Track: {{ talk.track }}</p>
+    </div>
+    <div class="attend-container" ng-switch="isAttendedTalk">
+        <a class="button-block" ng-hide="isAttendedTalk" ng-click="attendTalk(talk.id)">Attend this talk</a>
+        <a class="button-block" ng-show="isAttendedTalk" ng-click="unattendTalk(talk.id)">Unattend this talk</a>
+    </div>
+    <div class="description" ng-show="talk.abstract">
+        <p>{{ talk.abstract }}</p>
+    </div>
+
+    <div ng-controller="TalkSpeakersCtrl" ng-include="'views/_speakers.html'"></div>
+</div>

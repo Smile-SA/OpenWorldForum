@@ -1,0 +1,29 @@
+#partners {
+  background-color: $white;
+  padding-bottom: 50px;
+  h1 {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    color: $lighten-darkgrey;
+  }
+  h2 {
+    margin-left: 30px;
+  }
+  div.partners {
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    div.partner {
+      width: 130px;
+      margin: 10px auto;
+    }
+  }
+}
+
+.pic img {
+  height: auto;
+}

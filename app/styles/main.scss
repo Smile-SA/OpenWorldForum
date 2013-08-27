@@ -1,0 +1,177 @@
+/* Import premade mixins */
+@import 'stitch/patterns';
+@import "fonts/fonts";
+@import "variables";
+@import "header";
+@import "sidebar";
+@import "home";
+@import "concept";
+@import "speakers";
+@import "venue";
+@import "partners";
+@import "talk";
+@import "speaker";
+@import "mytalks";
+
+.mainview {
+  //background-color: $lighten-darkgrey;
+  /*background: -moz-linear-gradient(top, $background-color 0%, $white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $background-color), color-stop(100%, $white));
+  background: -webkit-linear-gradient(top, $background-color 0%, $white 100%);
+  background: -o-linear-gradient(top, $background-color 0%, $white 100%);
+  background: -ms-linear-gradient(top, $background-color 0%, $white 100%);
+  background: linear-gradient(to bottom, $background-color 0%, $white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$background-color', endColorstr='$white',GradientType=0 );*/
+  padding-top: 50px;
+  position: relative;
+  height: auto;
+  //min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+ul.list {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.events {
+  ul.list {
+    li {
+      padding-left: 25px;
+      div.theme {
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &.think {
+          background-color: $think-color;
+        }
+        &.code {
+          background-color: $code-color;
+        }
+        &.experiment {
+          background-color: $experiment-color;
+        }
+      }
+    }
+  }
+}
+
+.snap-content {
+  background-color: white;
+}
+
+/*
+.snap-content > *, .snap-drawer > *{
+  @include enable-hardware-acceleration;
+}
+*/
+body {
+  background-color: #272627;
+}
+
+.lsf-icon {
+  &.home:before {
+    content: '\E072';
+  }
+  &.building:before {
+    content: '\E023';
+  }
+  &.group:before {
+    content: '\E05c';
+  }
+  &.calendar:before {
+    content: '\E15e';
+  }
+  &.star:before {
+    content: '\E121';
+  }
+  &.info:before {
+    content: '\E075';
+  }
+  &.friend:before {
+    content: '\E051';
+  }
+  &.facebook:before {
+    content: '\E047';
+  }
+  &.twitter:before {
+    content: '\E12f';
+  }
+  &.linkedin:before {
+    content: '\E083';
+  }
+  &.external:before {
+    content: '\E046';
+  }
+}
+
+.snap-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainview {
+  position: absolute;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  width: 20px;
+  display: inline-block;
+}
+
+.list li>a:not([class*=button]) {
+  display: inline;
+}

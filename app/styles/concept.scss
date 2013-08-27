@@ -1,0 +1,121 @@
+$default-arrow-size: 30px;
+
+@mixin arrow($size) {
+  border-bottom: $size solid white;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  margin-left: -$size;
+  margin-right: -$size;
+}
+
+@mixin arrow-space($size) {
+  padding-bottom: $size;
+}
+
+/* Animations work only in recent webkit browsers... */
+.ios #concept {
+  div.header div.selector {
+        @include prefix('transition-property', 'left');
+        @include prefix('transition-duration', '0.5s');
+
+        @include enable-hardware-acceleration;
+  }
+
+  div.theme-description div {
+      @include prefix('animation', 'slide-right-to-left 0.4s linear 0s 1 alternate');
+      @include enable-hardware-acceleration;
+  }
+}
+
+
+#concept {
+  background-color: white;
+
+  div.header {
+    position: relative;
+    div.selector {
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      bottom: 0px;
+      left: 16%;
+
+      &.think {
+        left: 16%;
+      }
+      &.code {
+        left: 50%;
+      }
+      &.experiment {
+        left: 84%;
+      }
+
+      @media only screen and (max-width: 449px) {
+        @include arrow($default-arrow-size / 2);
+      }
+      @media only screen and (min-width: 450px) {
+        @include arrow($default-arrow-size);
+      }
+    }
+  }
+
+  ul.tab-viewer {
+    margin: 0;
+    list-style: none;
+    @extend .clearfix; //Solution alternative pour le bug d'affichage de cellule
+    overflow: hidden;
+    background-color: #51a6d7;
+    //display: table;
+    width: 100%;
+    li {
+      //display: table-cell; retablir si la solution alternative ne marche pas
+      //height: 50px;
+      float: left;
+      width: 33.3333333%;
+      @media only screen and (max-width: 449px) {
+        @include arrow-space($default-arrow-size/2);
+      }
+      @media only screen and (min-width: 450px) {
+        @include arrow-space($default-arrow-size);
+      }
+      &.theme.think {
+        background-color: $think-color;
+      }
+      &.theme.code {
+        background-color: $code-color;
+      }
+      &.theme.experiment {
+        background-color: $experiment-color;
+      }
+      img {
+        height: auto;
+      }
+    }
+  }
+  div.theme-description {
+    padding: 20px;
+    padding-bottom: 50px;
+    h2 {
+      margin-bottom: 20px;/**/
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-left: 30px;
+    }
+    div {
+      position: relative;
+    }
+  }
+}
+
+@-webkit-keyframes slide-right-to-left {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0%;
+  }
+}

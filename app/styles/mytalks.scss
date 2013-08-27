@@ -1,0 +1,15 @@
+#mytalks {
+  background-color: $lighten-darkgrey;
+  h1 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    color: $white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  div.notice {
+    color: $white;
+    margin: 20px;
+  }
+}

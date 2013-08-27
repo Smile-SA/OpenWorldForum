@@ -1,0 +1,19 @@
+<div class="events">
+    <ul class="list">
+        <div ng-repeat="(day, talks) in talksByDay">
+            <li class="list-divider">{{ day }}</li>
+            <li ng-repeat="talk in talks | orderBy:talk.starts_at">
+                <a ng-href="#/talk/{{ talk.id }}">
+                    <div class="hour">
+                        <span class="from">{{ talk.starts_at | date:'shortTime' }}</span>
+                        <span class="separator" ng-show="talk.ends_at">-</span>
+                        <span class="to" ng-show="talk.ends_at">{{ talk.ends_at | date:'shortTime' }}</span>
+                    </div>
+                    <div class="title">{{ talk.title }}</div>
+                    <span class="chevron"></span>
+                </a>
+                <div class="theme {{ talk.theme | lowercase }}"></div>
+            </li>
+        </div>
+    </ul>
+</div>

@@ -1,0 +1,57 @@
+div#talk {
+  div.header {
+    display: table;
+    width: 100%;
+    a.theme {
+      display: table-cell;
+      width: 20%;
+      max-width: 300px;
+      min-height: 40px;
+      background: $think-color url('../images/think-logo.png') no-repeat 50% 50%;
+      background-size: 200%;
+      @media only screen and (max-width: 349px) {
+        background-size: 200%;
+      }
+      @media only screen and (min-width: 350px) and (max-width: 519px) {
+        background-size: 150%;
+      }
+      @media only screen and (min-width: 520px) {
+        background-size: 100%;
+      }
+      &.code {
+        background-color: $code-color;
+        background-image: url('../images/code-logo.png');
+      }
+      &.experiment {
+        background-color: $experiment-color;
+        background-image: url('../images/experiment-logo.png');
+      }
+    }
+    div.infos {
+      min-width: 80%;
+      display: table-cell;
+      background-color: $white;
+      padding: 10px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      border-right: 5px solid white;
+    }
+  }
+  div.more-infos {
+    color: white;
+    margin: 20px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  }
+  div.attend-container {
+    padding: 20px;
+    background-color: $darkgrey;
+    .button-block {
+      margin-bottom: 0;
+    }
+  }
+  div.description {
+    color: $white;
+    padding: 20px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  }
+}

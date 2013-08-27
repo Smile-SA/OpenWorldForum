@@ -1,0 +1,12 @@
+<div id="mytalks" class="clearfix">
+    <h1>My Talks</h1>
+
+    <div ng-hide="talksByDay">
+        <div class="notice">
+            <p>
+                Here will be displayed the talks you want to attend. To attend a talk, visit a talk and push the "Attend
+                this talk" button. </p>
+        </div>
+    </div>
+    <div ng-controller="MyTalksCtrl" ng-include="'views/_talks.html'"></div>
+</div>

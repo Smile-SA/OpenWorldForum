@@ -1,0 +1,16 @@
+<div id="speaker" class="clearfix">
+    <div class="header">
+        <div class="pic">
+            <img ng-src="http://openworldforum.org/fr/speakers/{{ speaker.id }}/photo?s=260"/>
+        </div>
+        <div class="infos">
+            <h1>{{ speaker.name }}</h1>
+            <p ng-show="speaker.organisation">{{ speaker.organisation }}</p>
+            <p ng-show="speaker.website"><a owf-external ng-href="{{ speaker.website }}">{{ speaker.website }}</a></p>
+        </div>
+    </div>
+    <div class="description" ng-show="speaker.bio">
+        <p>{{ speaker.bio }}</p>
+    </div>
+    <div class="talks" ng-controller="SpeakerTalksCtrl" ng-include="'views/_talks.html'"></div>
+</div>

@@ -1,0 +1,30 @@
+div#speaker {
+  div.header {
+    width: 100%;
+    position: relative;
+    div.pic {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $white;
+    }
+    div.infos {
+      background-color: $white;
+      padding: 10px;
+      padding-left: 145px;
+      height: 110px;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  div.description {
+    color: $white;
+    padding: 20px;
+  }
+  div.talks {
+    border-top: 2px solid $darkgrey;
+  }
+}

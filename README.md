@@ -9,6 +9,7 @@
 * Node.js: **brew install node**
 * Yeoman stack: **npm install -g grunt-cli bower yo**
 * nomad-cli: **gem install nomad-cli**
+* stitch: **gem install stitch**
 
 
 ## Build
